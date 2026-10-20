@@ -15,7 +15,7 @@ export class TarefasService {
 
   create(createTarefaDto: CreateTarefaDto) {
     const tarefa = this.tarefaRepository.create(createTarefaDto);
-    this.tarefaRepository.save(tarefa);
+    return this.tarefaRepository.save(tarefa);
   }
 
   findAll() {
